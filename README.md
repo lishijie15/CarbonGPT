@@ -9,8 +9,9 @@ Shijie Li, Jiajun Lai, Jing Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corres
 ## Abstract
 
 <p style="text-align: justify">
-Carbon emission reduction has emerged as a global core development objective, where dynamic carbon flow perception serves as the critical foundation for low-carbon dispatch. However, the electrification shift of transportation carbon emissions caused by large-scale electric vehicle (EV) grid integration, coupled with the grid impact from renewable energy source (RES) volatility, poses unprecedented challenges for accurate carbon emission prediction. Although adaptive graphs and large language models (LLMs) can achieve carbon emission prediction for power distribution networks (PDNs) under data sparsity scenarios, the spurious cross-variable correlations derived from their adaptive topologies tend to be amplified by LLMs, consequently constraining model learning and reasoning capabilities. To address this, we propose a novel model named CarbonGPT. This innovative model employs a causal encoder to uncover genuine cross-variable causal relationships, while incorporating a meta causal graph dictionary and lightweight alignment to enhance the comprehension of carbon feature representations by LLMs under EV and RES grid integration scenarios. Extensive simulations in PDNs with high penetration of EVs and RES integration have demonstrated that CarbonGPT consistently achieves state-of-the-art performance in both prediction accuracy and effectiveness.
+*Carbon emission reduction has emerged as a global core development objective, where dynamic carbon flow perception serves as the critical foundation for low-carbon dispatch. However, the electrification shift of transportation carbon emissions caused by large-scale electric vehicle (EV) grid integration, coupled with the grid impact from renewable energy source (RES) volatility, poses unprecedented challenges for accurate carbon emission prediction. Although adaptive graphs and large language models (LLMs) can achieve carbon emission prediction for power distribution networks (PDNs) under data sparsity scenarios, the spurious cross-variable correlations derived from their adaptive topologies tend to be amplified by LLMs, consequently constraining model learning and reasoning capabilities. To address this, we propose a novel model named CarbonGPT. This innovative model employs a causal encoder to uncover genuine cross-variable causal relationships, while incorporating a meta causal graph dictionary and lightweight alignment to enhance the comprehension of carbon feature representations by LLMs under EV and RES grid integration scenarios. Extensive simulations in PDNs with high penetration of EVs and RES integration have demonstrated that CarbonGPT consistently achieves state-of-the-art performance in both prediction accuracy and effectiveness.*
 </p>
+
 
 ![image](pictures/CarbonGPT.png)
 
@@ -35,10 +36,10 @@ Carbon emission reduction has emerged as a global core development objective, wh
   * <a href='#Preparing Checkpoints and Data'>3.1. Preparing Checkpoints and Data</a>
   * <a href='#Running Evaluation'>3.2. Running Evaluation</a>
   * <a href='#Evaluation Metric Calculation'>3.3. Evaluation Metric Calculation</a>
-* <a href='#Evaluating CarbonGPT'>4. Carbon Emission Flow</a>
-  * <a href='#Preparing Checkpoints and Data'>3.1. Power Flow</a>
-  * <a href='#Running Evaluation'>3.2. Data </a>
-  * <a href='#Evaluation Metric Calculation'>3.3. Evaluation Metric Calculation</a>
+* <a href='#Carbon Emission Flow'>4. Carbon Emission Flow</a>
+  * <a href='#Preparing Checkpoints and Data'>4.1. Power Flow</a>
+  * <a href='#Preparing Data'>4.2. Preparing Data </a>
+  * <a href='#Carbon Emission Rate and Carbon Emission Intensity'>4.3. Carbon Emission Rate and Carbon Emission Intensity</a>
 
 ****
 
@@ -189,18 +190,18 @@ python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompt
 
 You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
 
-### 4. Evaluating CarbonGPT
+### 4. Carbon Emission Flow
 
 <span id='Preparing Checkpoints and Data'/>
 
-#### 4.1. Preparing Checkpoints and Data 
+#### 4.1. Power Flow
 
 * **Checkpoints:** You could try to evaluate CarbonGPT by using your own model or our released checkpoints.
-* **Data:** We split test sets for Scenario 1 and Scenario 2 datasets and make the instruction data for evaluation. Please refer to the [evaluating](./CarbonGPT_eval.sh).
+* **Data:** We split test sets and make the instruction data for evaluation. Please refer to the [evaluating](./CarbonGPT_eval.sh).
 
 <span id='Running Evaluation'/>
 
-#### 4.2. Running Evaluation
+#### 4.2. Preparing Data
 
 You could start the second stage tuning by filling blanks at [CarbonGPT_eval.sh](./CarbonGPT_eval.sh). There is an example as below: 
 
@@ -217,7 +218,7 @@ num_gpus=8
 python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompting_file ${datapath} --st_data_path ${st_data_path} --output_res_path ${res_path} --start_id ${start_id} --end_id ${end_id} --num_gpus ${num_gpus}
 ```
 
-#### 4.3. Evaluation Metric Calculation
+#### 4.3. Carbon Emission Rate and Carbon Emission Intensity
 
 <span id='Evaluation Metric Calculation'/>
 
