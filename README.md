@@ -190,9 +190,11 @@ python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompt
 
 You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
 
+<span id='Carbon Emission Flow'/>
+
 ### 4. Carbon Emission Flow
 
-<span id='Preparing Checkpoints and Data'/>
+<span id='Power Flow'/>
 
 #### 4.1. Power Flow
 
