@@ -201,7 +201,7 @@ You can use [result_test.py](./metric_calculation/result_test.py) to calculate t
 * **Checkpoints:** You could try to evaluate CarbonGPT by using your own model or our released checkpoints.
 * **Data:** We split test sets and make the instruction data for evaluation. Please refer to the [evaluating](./CarbonGPT_eval.sh).
 
-<span id='Running Evaluation'/>
+<span id='Preparing Data'/>
 
 #### 4.2. Preparing Data
 
@@ -219,10 +219,9 @@ num_gpus=8
 
 python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompting_file ${datapath} --st_data_path ${st_data_path} --output_res_path ${res_path} --start_id ${start_id} --end_id ${end_id} --num_gpus ${num_gpus}
 ```
+<span id='Carbon Emission Rate and Carbon Emission Intensity'/>
 
 #### 4.3. Carbon Emission Rate and Carbon Emission Intensity
-
-<span id='Evaluation Metric Calculation'/>
 
 You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
 
