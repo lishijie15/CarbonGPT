@@ -101,7 +101,7 @@ Please follow the instructions to prepare the checkpoints.
   
   we specifically design the lightweight causal inference and intervention mechanism named causal intervention encoder. This is integrated with multi-scale temporal feature extraction modules to help the encoder enable the LLM to understand and learn complex spatio-temporal evolution patterns. The weights of [causal_encoder](./checkpoints/causal_encoder/pretrain_causalencoder.pth) are pre-trained through a typical multi-step spatio-temporal prediction task.
   
-- `{PTN} Data`:
+- `PTN Data`:
 
   To evaluate the effectiveness of the proposed model in predicting spatio-temporal patterns across different scenarios, we have constructed two distinct scale scenarios. Scenario 1 involves net load forecasting for large-scale PDSs, considering the integration of substantial Renewable Energy Sources (RES). Scenario 2 focuses on traffic flow prediction, taking into account factors such as crime rates. These data are organized in [train_data](./CarbonGPT/ST_data_CarbonGPT/train_data). Please download them and put them at ./CarbonGPT/ST_data/train_10pv
 
