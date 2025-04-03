@@ -43,9 +43,27 @@ Shijie Li, Jiajun Lai, Jing Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corres
 
 ****
 
+
+
+<span id='Introduction to the PTN'/>
+
+### 1. Introduction to the PTN
+
+To evaluate the effectiveness of the proposed CarbonGPT in predicting carbon emissions under large-scale integration of EVCS and RES, we constructed the PTN, as illustrated in \cref{fig:ptn}. Specifically, due to data privacy constraints, obtaining the real structure and related data of the PDN and UTN within a specific region is highly challenging. Inspired by~\citep{Shijie2024}, we utilize the proposed novel RPTM to allocate real winter load data and RES data from 22 neighboring small areas to the three feeder nodes of the IEEE 8500-node test feeder~\citep{5484381}, thereby constructing a large-scale PDN that closely approximates reality. Subsequently, we couple the UTN~\citep{UTD19} with the PDN~\citep{pfenninger2016long} from two regions that have similar weather, economic conditions, electricity consumption habits, and driving habits, using the RPTM to form a complete large-scale PTN dataset. Detailed information on the data sources and selection methods can be found at \textcolor{blue}{https://github.com/lishijie15/CarbonGPT}. Notably, the RPTM operates independently from CarbonGPT.
+
+
+
+Due to legal and privacy protection constraints, acquiring diverse data sources including PDS structure, long-term PDS state data, UTS structure, and long-term traffic flow data for a specific large-scale region in reality is challenging~\cite{IOTJ2020}. Currently, none of publicly available datasets cover both PDS and UTS information for the same area. Certain scholars have merged analogous power and traffic systems to create the PTS~\cite{zhang2019yen}. Nevertheless, the resulting system is relatively limited in scale and deviates substantially from real-world PDSs~\cite{su2020integration}. To address this issue, this paper selects the IEEE 8500-node test feeder and the UTD19 dataset as the data sources for the PDS and UTS, respectively, and fuses them to construct a large-scale PTS. 
+
+Specifically, various regions exhibit significant differences in climate conditions, user electricity consumption habits, driving habits, and EV penetration rates. These factors greatly affect the distribution of load peaks and valleys. To ensure the authenticity of the coupled system, the data for the PDS is sourced from cities in Colorado, specifically from the U.S. Building End-Use Load Profiles dataset~\cite{frick2019end}. Regarding the UTS, economically developed regions with a mild climate and a significant scale of EVs are more representative in simulating the impact of numerous EVs integrating to the PDS. Therefore, we select the traffic flow data from the Hamburg region in Germany~\cite{UTD19}. The topology of both the PDS and the UTS is shown in Fig.~\ref{fig:power_utd}, with these two regions characterized by similar economic and climatic conditions. These areas share comparable EV penetration rates and require substantial heating in the winter, leading to high and fluctuating winter loads. Moreover, there is a noticeable decrease in the range of EVs during winter~\cite{hao2020seasonal}. Thus, the winter data better represents the PTS we constructed and facilitates the analysis of the impact of the fluctuating frequency of EV charging on the PDS.
+
+By fusing multi-source spatio-temporal information within the designated region as described above, it becomes possible to construct a large-scale PTS that couples the topological structures of both systems, as illustrated in the accompanying Fig.~\ref{fig:power_utd}. Additionally, the EVCSs are identified as red intersection points within the PTS. In the data preprocessing phase, we eliminate PDS loads with lower power that do not conform to the structure of the IEEE-8500 node test feeder. Subsequently, the samples are allocated to their respective nodes according to the linked feeder from the dataset, ensuring that the power of each node meets the requirements of the case study. Finally, the principle of closest proximity is utilized to select the coupling nodes, thereby eliminating any anomalous EVCS. The data is split into training, validation, and testing sets using a ratio of 7:1:2.
+
+
+
 <span id='Environment'/>
 
-### 1. Environment
+### 2. Environment
 
 Please first clone the repo and install the required environment, which can be done by running the following commands:
 
@@ -103,7 +121,7 @@ Please follow the instructions to prepare the checkpoints.
   
 - `PTN Data`:
 
-  To evaluate the effectiveness of the proposed model in predicting spatio-temporal patterns across different scenarios, we have constructed two distinct scale scenarios. Scenario 1 involves net load forecasting for large-scale PDSs, considering the integration of substantial Renewable Energy Sources (RES). Scenario 2 focuses on traffic flow prediction, taking into account factors such as crime rates. These data are organized in [train_data](./CarbonGPT/ST_data_CarbonGPT/train_data). Please download them and put them at ./CarbonGPT/ST_data/train_10pv
+  To evaluate the effectiveness of the proposed model in predicting spatio-temporal patterns across different scenarios, we have constructed two distinct scale scenarios. Scenario 1 involves net load forecasting for large-scale PDNs, considering the integration of substantial Renewable Energy Sources (RES). Scenario 2 focuses on traffic flow prediction, taking into account factors such as crime rates. These data are organized in [train_data](./CarbonGPT/ST_data_CarbonGPT/train_data). Please download them and put them at ./CarbonGPT/ST_data/train_10pv
 
 <span id='Instruction Tuning'/>
 
@@ -114,8 +132,8 @@ Please follow the instructions to prepare the checkpoints.
 ```shell
 # to fill in the following path to run our CarbonGPT!
 model_path=./checkpoints/vicuna-7b-v1.5-16k
-instruct_ds=./ST_data/train_10pv/train_10pv_only.json
-st_data_path=./ST_data/train_10pv/train_pv10_only.pkl
+instruct_ds=./ST_data/train_10pv/train_10pv_withUTN.json
+st_data_path=./ST_data/train_10pv/train_pv10_withUTN.pkl
 pretra_ste=Causal_Encoder
 output_model=./checkpoints/Causal_Encoder_7b_pv10
 
@@ -174,8 +192,8 @@ You could start the second stage tuning by filling blanks at [CarbonGPT_eval.sh]
 ```shell
 # to fill in the following path to evaluation!
 output_model=./checkpoints/Causal_Encoder_7b_pv10
-datapath=./ST_data/test_10pv/test_10pv_only.json
-st_data_path=./ST_data/test_10pv/test_pv10_only.pkl
+datapath=./ST_data/test_10pv/test_10pv_withUTN.json
+st_data_path=./ST_data/test_10pv/test_pv10_withUTN.pkl
 res_path=./result_test/Causal_Encoder_7b_pv10_
 start_id=0
 end_id=593208
@@ -225,3 +243,9 @@ python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompt
 
 You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
 
+
+
+| Generation type   | Total Capacity (kW) | GCI (kgCO_2/kWh) |
+| ----------------- | ------------------- | ---------------- |
+| Coal-fired unit   | 1000                | 0.98883          |
+| Zero-carbon units | 12370               | 0.01356          |
