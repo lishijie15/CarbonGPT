@@ -8,9 +8,8 @@ Shijie Li, Jiajun Lai, Jing Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corres
 
 ## Abstract
 
-<p style="text-align: justify">
 *Carbon emission reduction has emerged as a global core development objective, where dynamic carbon flow perception serves as the critical foundation for low-carbon dispatch. However, the electrification shift of transportation carbon emissions caused by large-scale electric vehicle (EV) grid integration, coupled with the grid impact from renewable energy source (RES) volatility, poses unprecedented challenges for accurate carbon emission prediction. Although adaptive graphs and large language models (LLMs) can achieve carbon emission prediction for power distribution networks (PDNs) under data sparsity scenarios, the spurious cross-variable correlations derived from their adaptive topologies tend to be amplified by LLMs, consequently constraining model learning and reasoning capabilities. To address this, we propose a novel model named CarbonGPT. This innovative model employs a causal encoder to uncover genuine cross-variable causal relationships, while incorporating a meta causal graph dictionary and lightweight alignment to enhance the comprehension of carbon feature representations by LLMs under EV and RES grid integration scenarios. Extensive simulations in PDNs with high penetration of EVs and RES integration have demonstrated that CarbonGPT consistently achieves state-of-the-art performance in both prediction accuracy and effectiveness.*
-</p>
+
 
 
 ![image](pictures/CarbonGPT.png)
@@ -21,6 +20,33 @@ Shijie Li, Jiajun Lai, Jing Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corres
 * To effectively identify and eliminate spurious cross-variable correlations in the adaptive spatial structure of PDNs, we specifically design variable embedding, causal inference, and causal enhancement within the causal encoder. These components ensure the preservation of independent variable features while uncovering cross-variable causal relationships to guide the LLM in learning the carbon emission patterns of PDNs.
 * To fully leverage the powerful LLM in adapting to sparse PDN data and aligning with the continuous value distribution of carbon emissions, we introduce a meta causal graph dictionary and lightweight marker alignment. These are designed to assist the LLM in understanding the carbon feature representations of PDNs after causal enhancement, based on the characteristics of EVCS and RES.
 * To closely simulate realistic PDNs under extensive integration of EVCS and RES, we propose the RPTM, which constructs a large-scale PTN with high RES penetration through density-based spatial clustering (DSC), dual-network threshold fusion, and traffic-to-charge (T2C). The proposed CarbonGPT achieves state-of-the-art (SOTA) performance within the PTN.
+
+## Introduction to the PTN
+
+To evaluate the effectiveness of the proposed CarbonGPT in predicting carbon emissions under large-scale integration of EVCS and RES, we constructed the PTN. Due to legal and privacy protection constraints, acquiring diverse data sources including PDN structure, long-term PDN load data, RES data, weather data, UTN structure, and long-term traffic flow data for a specific large-scale region in reality is challenging. 
+
+To address this, researchers have mapped load data from three feeders in similar areas to the nodes of three feeders in the IEEE 8500-node test feeder, thereby simulating a real large-scale PDS based on actual load data. Drawing inspiration from this approach, we utilize the proposed novel RPTM to construct large-scale RES-integrated PDSs that closely approximate real-world scenarios.
+
+Specifically, RPTM utilizes real winter load data (U.S. Building End-Use Load Profiles dataset), and combines it with RES data derived from historical weather data across 22 adjacent small areas in Colorado, USA, where the load dataset is located. Additionally, government policies, population size, and economic benefits are taken into account. Then, the long-term datasets (i.e., load and RES) are mapped into the IEEE 8500-node test feeder according to its topology and feeder information, ensuring that the power at each node meets the requirements of the scenario study. The rooftop PV systems have a tilt angle of 35$^\circ$, face south, have a loss rate of 10\%, and each system has a rated capacity of 10 kW. The wind turbines are GE-1.6, each with a rated capacity of 1.5 MW and a height of 80 meters~\cite{staffell2016using}. 
+
+Subsequently, based on the constructed PDN, we couple the UTN with it to analyze the impact of electrification transition on carbon emissions in the UTN. Currently, none of publicly available datasets cover both PDN and UTN information for the same area. Certain scholars have merged analogous power and traffic systems to create the PTN. Nevertheless, the resulting system is relatively limited in scale and deviates substantially from real-world PDNs. To address this issue, this paper selects the IEEE 8500-node test feeder and the UTD19 dataset as the data sources for the PDN and UTN, respectively, and fuses them to construct a large-scale PTN. 
+
+Specifically, various regions exhibit significant differences in climate conditions, electricity consumption habits, driving patterns, and EV penetration rates. These factors greatly influence the distribution of load peaks and valleys. Economically developed regions with mild climates and a significant scale of EV adoption are more representative when simulating the impact of numerous EVs integrating into the PDN. To ensure the authenticity of the coupled network, we select traffic flow data from the Hamburg region in Germany~\cite{UTD19}. Both the PDN and the UTN in these regions are characterized by similar economic and climatic conditions. These areas share comparable EV penetration rates and require substantial heating during winter, leading to high and fluctuating winter loads. Moreover, there is a noticeable reduction in EV range during winter~\cite{hao2020seasonal}. Thus, the winter data better represents the PTN we constructed and facilitates the analysis of the impact of fluctuating EV charging frequencies on the PDN.
+
+By fusing multi-source spatio-temporal information within the designated region as described above, it becomes possible to construct a large-scale PTN that couples the topological structures of both systems, as shown in the Fig. below. Additionally, the EVCSs are identified as red intersection points within the PTN. In the data preprocessing phase, we eliminate PDN loads with lower power that do not conform to the structure of the IEEE-8500 node test feeder. Subsequently, the samples are allocated to their respective nodes according to the linked feeder from the dataset, ensuring that the power of each node meets the requirements of the case study. Finally, the principle of closest proximity is utilized to select the coupling nodes, thereby eliminating any anomalous EVCS. 
+
+The data is divided into training, validation, and testing sets using a ratio of 1:1:1. Notably, the RPTM operates independently from CarbonGPT.
+
+## Simulation Setting
+
+Our simulations utilize the powerful Vicuna-7B~\citep{zheng2024judging} as the foundational LLM, with key hyperparameters provided in \cref{CE_generation}. We use root mean square error (RMSE), mean absolute error (MAE), and mean absolute percentage error (MAPE) as evaluation metrics to quantify the differences between the predicted results and the actual labels~\citep{wang2024nuwadynamics}, which allows us to effectively assess the performance of CarbonGPT.
+
+The power flow calculations for the PTN are conducted using OpenDSS, which enables hour-level carbon emission analysis. There are two types of generation: coal-fired units with a capacity of 1 MW and zero-carbon emission units (i.e., PVG and WG) with a capacity of less than 8 MW~\citep{7021901}. The PTN exhibits a maximum power demand of approximately 12.46 MW, and a RES penetration rate of 92.5\%.
+
+| Generation Type   | Total Capacity (kW) | GCI (kgCO_2/kWh) |
+| ----------------- | ------------------- | ---------------- |
+| Coal-fired unit   | 1000                | 0.98883          |
+| Zero-carbon units | 12370               | 0.01356          |
 
 ## Getting Started
 
@@ -41,29 +67,9 @@ Shijie Li, Jiajun Lai, Jing Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corres
   * <a href='#Preparing Data'>4.2. Preparing Data </a>
   * <a href='#Carbon Emission Rate and Carbon Emission Intensity'>4.3. Carbon Emission Rate and Carbon Emission Intensity</a>
 
-****
-
-
-
-<span id='Introduction to the PTN'/>
-
-### 1. Introduction to the PTN
-
-To evaluate the effectiveness of the proposed CarbonGPT in predicting carbon emissions under large-scale integration of EVCS and RES, we constructed the PTN, as illustrated in \cref{fig:ptn}. Specifically, due to data privacy constraints, obtaining the real structure and related data of the PDN and UTN within a specific region is highly challenging. Inspired by~\citep{Shijie2024}, we utilize the proposed novel RPTM to allocate real winter load data and RES data from 22 neighboring small areas to the three feeder nodes of the IEEE 8500-node test feeder~\citep{5484381}, thereby constructing a large-scale PDN that closely approximates reality. Subsequently, we couple the UTN~\citep{UTD19} with the PDN~\citep{pfenninger2016long} from two regions that have similar weather, economic conditions, electricity consumption habits, and driving habits, using the RPTM to form a complete large-scale PTN dataset. Detailed information on the data sources and selection methods can be found at \textcolor{blue}{https://github.com/lishijie15/CarbonGPT}. Notably, the RPTM operates independently from CarbonGPT.
-
-
-
-Due to legal and privacy protection constraints, acquiring diverse data sources including PDS structure, long-term PDS state data, UTS structure, and long-term traffic flow data for a specific large-scale region in reality is challenging~\cite{IOTJ2020}. Currently, none of publicly available datasets cover both PDS and UTS information for the same area. Certain scholars have merged analogous power and traffic systems to create the PTS~\cite{zhang2019yen}. Nevertheless, the resulting system is relatively limited in scale and deviates substantially from real-world PDSs~\cite{su2020integration}. To address this issue, this paper selects the IEEE 8500-node test feeder and the UTD19 dataset as the data sources for the PDS and UTS, respectively, and fuses them to construct a large-scale PTS. 
-
-Specifically, various regions exhibit significant differences in climate conditions, user electricity consumption habits, driving habits, and EV penetration rates. These factors greatly affect the distribution of load peaks and valleys. To ensure the authenticity of the coupled system, the data for the PDS is sourced from cities in Colorado, specifically from the U.S. Building End-Use Load Profiles dataset~\cite{frick2019end}. Regarding the UTS, economically developed regions with a mild climate and a significant scale of EVs are more representative in simulating the impact of numerous EVs integrating to the PDS. Therefore, we select the traffic flow data from the Hamburg region in Germany~\cite{UTD19}. The topology of both the PDS and the UTS is shown in Fig.~\ref{fig:power_utd}, with these two regions characterized by similar economic and climatic conditions. These areas share comparable EV penetration rates and require substantial heating in the winter, leading to high and fluctuating winter loads. Moreover, there is a noticeable decrease in the range of EVs during winter~\cite{hao2020seasonal}. Thus, the winter data better represents the PTS we constructed and facilitates the analysis of the impact of the fluctuating frequency of EV charging on the PDS.
-
-By fusing multi-source spatio-temporal information within the designated region as described above, it becomes possible to construct a large-scale PTS that couples the topological structures of both systems, as illustrated in the accompanying Fig.~\ref{fig:power_utd}. Additionally, the EVCSs are identified as red intersection points within the PTS. In the data preprocessing phase, we eliminate PDS loads with lower power that do not conform to the structure of the IEEE-8500 node test feeder. Subsequently, the samples are allocated to their respective nodes according to the linked feeder from the dataset, ensuring that the power of each node meets the requirements of the case study. Finally, the principle of closest proximity is utilized to select the coupling nodes, thereby eliminating any anomalous EVCS. The data is split into training, validation, and testing sets using a ratio of 7:1:2.
-
-
-
 <span id='Environment'/>
 
-### 2. Environment
+### 1. Environment
 
 Please first clone the repo and install the required environment, which can be done by running the following commands:
 
@@ -242,10 +248,3 @@ python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompt
 #### 4.3. Carbon Emission Rate and Carbon Emission Intensity
 
 You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
-
-
-
-| Generation type   | Total Capacity (kW) | GCI (kgCO_2/kWh) |
-| ----------------- | ------------------- | ---------------- |
-| Coal-fired unit   | 1000                | 0.98883          |
-| Zero-carbon units | 12370               | 0.01356          |
