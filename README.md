@@ -50,7 +50,7 @@ Our simulations utilize the powerful Vicuna-7B~\citep{zheng2024judging} as the f
 
 The detailed hyperparameter settings and the training environment of CarbonGPT can be fully obtained in the <a href='#Getting Started'>subsequent sections</a>.
 
-The power flow calculations for the PTN are conducted using OpenDSS, which enables hour-level carbon emission analysis. There are two types of generation: coal-fired units with a capacity of 1 MW and zero-carbon emission units (i.e., PVG and WG) with a capacity of less than 8 MW~\citep{7021901}. The PTN exhibits a maximum power demand of approximately 12.46 MW, and a RES penetration rate of 92.5\%.
+The power flow calculations for the PTN are conducted using OpenDSS, which enables hour-level carbon emission analysis. There are two types of generation: coal-fired units with a capacity of 1 MW and zero-carbon emission units (i.e., PVG and WG) with a capacity of less than 8 MW~\citep{7021901}. The PTN exhibits a maximum power demand of approximately 12.46 MW, and a RES penetration rate of 92.5\%. The CI~\引用 for the generation units is as follows:
 
 | Generation Type   | Total Capacity (kW) | GCI (kgCO_2/kWh) |
 | ----------------- | ------------------- | ---------------- |
@@ -72,9 +72,10 @@ The power flow calculations for the PTN are conducted using OpenDSS, which enabl
   * <a href='#Running Evaluation'>3.2. Running Evaluation</a>
   * <a href='#Evaluation Metric Calculation'>3.3. Evaluation Metric Calculation</a>
 * <a href='#Carbon Emission Flow'>4. Carbon Emission Flow</a>
-  * <a href='#Preparing Checkpoints and Data'>4.1. Power Flow</a>
-  * <a href='#Preparing Data'>4.2. Preparing Data </a>
-  * <a href='#Carbon Emission Rate and Carbon Emission Intensity'>4.3. Carbon Emission Rate and Carbon Emission Intensity</a>
+  * <a href='#Code Structure of the Carbon Emission Flow'>4.1. Code Structure of the Carbon Emission Flow</a>
+  * <a href='#Environment of the Carbon Emission Flow'>4.2. Environment of the Carbon Emission Flow </a>
+  * <a href='#Generate OpenDss Files'>4.3. Generate OpenDss Files</a>
+  * <a href='#Run Carbon Emission Flow'>4.4. Run Carbon Emission Flow</a>
 
 <span id='Environment'/>
 
@@ -227,33 +228,23 @@ You can use [result_test.py](./metric_calculation/result_test.py) to calculate t
 
 ### 4. Carbon Emission Flow
 
-<span id='Power Flow'/>
+<span id='Code Structure of the Carbon Emission Flow'/>
 
-#### 4.1. Power Flow
+#### 4.1. Code Structure of the Carbon Emission Flow
 
-* **Checkpoints:** You could try to evaluate CarbonGPT by using your own model or our released checkpoints.
-* **Data:** We split test sets and make the instruction data for evaluation. Please refer to the [evaluating](./CarbonGPT_eval.sh).
+* **Checkpoints:** You 
+* **Data:** We 
 
-<span id='Preparing Data'/>
+<span id='Environment of the Carbon Emission Flow'/>
 
-#### 4.2. Preparing Data
+#### 4.2. Environment of the Carbon Emission Flow (Restricted to *Windows*)
 
-You could start the second stage tuning by filling blanks at [CarbonGPT_eval.sh](./CarbonGPT_eval.sh). There is an example as below: 
+You could  
 
-```shell
-# to fill in the following path to evaluation!
-output_model=./checkpoints/Causal_Encoder_7b_pv10
-datapath=./ST_data/test_10pv/test_10pv_only.json
-st_data_path=./ST_data/test_10pv/test_pv10_only.pkl
-res_path=./result_test/Causal_Encoder_7b_pv10_
-start_id=0
-end_id=593208
-num_gpus=8
+<span id='Generate OpenDss Files'/>
 
-python ./CarbonGPT/eval/test_CarbonGPT.py --model-name ${output_model}  --prompting_file ${datapath} --st_data_path ${st_data_path} --output_res_path ${res_path} --start_id ${start_id} --end_id ${end_id} --num_gpus ${num_gpus}
-```
-<span id='Carbon Emission Rate and Carbon Emission Intensity'/>
+#### 4.3. Generate OpenDss Files
 
-#### 4.3. Carbon Emission Rate and Carbon Emission Intensity
+<span id='Run Carbon Emission Flow'/>
 
-You can use [result_test.py](./metric_calculation/result_test.py) to calculate the performance metrics of the predicted results. 
+#### 4.4. Run Carbon Emission Flow
