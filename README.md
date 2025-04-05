@@ -123,10 +123,10 @@ power demand of approximately 12.46 MW, and a RES penetration rate of 92.5%.
 The [CI](https://www.epa.gov/sites/default/files/2020-12/documents/power_plants_2017_industrial_profile_updated_2020.pdf)
 for the generation units is as follows:
 
-| Generation Type   | Total Capacity (kW) | CI for Generation Units (kgCO$_2$/kWh) |
-| ----------------- | ------------------- | -------------------------------------- |
-| Coal-fired unit   | 1000                | 0.98883                                |
-| Zero-carbon units | 12370               | 0.01356                                |
+| Generation Type   | Total Capacity (kW) | CI for Generation Units (kgCO_2/kWh) |
+| ----------------- | ------------------- | ------------------------------------ |
+| Coal-fired unit   | 1000                | 0.98883                              |
+| Zero-carbon units | 12370               | 0.01356                              |
 
 ## Getting Started
 
