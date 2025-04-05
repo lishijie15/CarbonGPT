@@ -108,7 +108,7 @@ LLM, with the key hyperparameters specified as follows:
 | Number of hidden layers / $\beta$    | 32 / 12                  |
 
 The detailed hyperparameter settings and the training environment of CarbonGPT can be fully obtained in
-the <a href='#Getting Started'>subsequent sections</a>.
+the <a href='#all_catelogue'>subsequent sections</a>.
 
 The power flow calculations for the PTN are conducted using OpenDSS, which enables hour-level carbon emission analysis.
 There are two types of generation: coal-fired units with a capacity of 1 MW and zero-carbon emission units (i.e., PVG
