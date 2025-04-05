@@ -134,8 +134,7 @@ The power flow calculations for the PTN are conducted using OpenDSS (PyDSS inter
 * <a href='#Carbon Emission Flow'>4. Carbon Emission Flow</a>
     * <a href='#Code Structure of the Carbon Emission Flow'>4.1. Code Structure of the Carbon Emission Flow</a>
     * <a href='#Environment of the Carbon Emission Flow'>4.2. Environment of the Carbon Emission Flow</a>
-    * <a href='#Generate OpenDss Files'>4.3. Generate OpenDss Files</a>
-    * <a href='#Run Carbon Emission Flow'>4.4. Run Carbon Emission Flow</a>
+    * <a href='#Run Carbon Emission Flow'>4.3. Run Carbon Emission Flow</a>
 
 <span id='Environment'/>
 
@@ -327,7 +326,7 @@ conda activate carbonEmission
 pip install py_dss interface pandas numpy
 ```
 
-<span id='Generate OpenDss Files'/>
+<span id='Run Carbon Emission Flow'/>
 
 #### 4.3. Run Carbon Emission Flow
 
