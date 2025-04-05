@@ -307,11 +307,11 @@ results.
 * **plot:** Contains the plot files
 * **Feeders/8500-Node:** Contains the OpenDSS files for the feeders
 * **concat data.py:** Concatenates the load, wind power, and photovoltaic prediction data
-* **PF_transfer.py:** Sets up the power flow simulation and estimates carbon emissions
+* **PF_transfer.py:** Sets up the power flow simulation and predicts carbon emissions
 * **load_opendss.py:** Generate load-related OpenDSS files based on the template file
 * **generate_opendss.py:** Generate Generator-related OpenDSS files based on the template file and run carbon emission
   flow
-* **Carbon_new.py:** Estimates carbon emissions
+* **Carbon_new.py:** Predicts carbon emissions
 
 <span id='Environment of the Carbon Emission Flow'/>
 
@@ -333,7 +333,7 @@ pip install py_dss interface pandas numpy
 
 Please put the json output into the **data/JsonData** folder.
 
-Then, run the following command to estimate carbon emissions flow at specific timestamp:
+Then, run the following command to forecasting carbon emissions flow at specific timestamp:
 
 ```shell
 python generate_opendss.py -filetype json -pred_or_true pred -index <timestamp>
