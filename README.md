@@ -110,12 +110,7 @@ LLM, with the key hyperparameters specified as follows:
 The detailed hyperparameter settings and the training environment of CarbonGPT can be fully obtained in
 the <a href='#all_catelogue'>subsequent sections</a>.
 
-The power flow calculations for the PTN are conducted using OpenDSS, which enables hour-level carbon emission analysis.
-There are two types of generation: coal-fired units with a capacity of 1 MW and zero-carbon emission units (i.e., PVG
-and WG) with a capacity of less than [8 MW](https://ieeexplore.ieee.org/document/7021901). The PTN exhibits a maximum
-power demand of approximately 12.46 MW, and a RES penetration rate of 92.5%.
-The [CI](https://www.epa.gov/sites/default/files/2020-12/documents/power_plants_2017_industrial_profile_updated_2020.pdf)
-for the generation units is as follows:
+The power flow calculations for the PTN are conducted using OpenDSS (PyDSS interface), which enables hour-level carbon emission analysis. There are two types of generation: [coal-fired units](https://ieeexplore.ieee.org/document/5484381) with a capacity of 1 MW and zero-carbon emission units (i.e., PVG and WG) with a capacity of less than 8 MW. The PTN exhibits a maximum power demand of approximately 12.46 MW, and a RES penetration rate of 92.5%. The [CI](https://www.epa.gov/sites/default/files/2020-12/documents/power_plants_2017_industrial_profile_updated_2020.pdf) for the generation units is as follows:
 
 | Generation Type   | Total Capacity (kW) | CI for Generation Units (kgCO<sub>2</sub>/kWh) |
 | ----------------- | ------------------- | ---------------------------------------------- |
@@ -154,7 +149,7 @@ conda create -n CarbonGPT python=3.9.13
 conda activate CarbonGPT
 
 # Torch with CUDA 11.8
-pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2+cu118 -f https://download.pytorch.org/whl/torch_stable.html
 
 # To support vicuna base model
 pip3 install "fschat[model_worker,webui]"
@@ -209,12 +204,7 @@ Please follow the instructions to prepare the checkpoints.
 
 - `PTN Data`:
 
-  To evaluate the effectiveness of the proposed model in predicting spatio-temporal patterns across different scenarios,
-  we have constructed two distinct scale scenarios. Scenario 1 involves net load forecasting for large-scale PDNs,
-  considering the integration of substantial Renewable Energy Sources (RES). Scenario 2 focuses on traffic flow
-  prediction, taking into account factors such as crime rates. These data are organized
-  in [train_data](./CarbonGPT/ST_data_CarbonGPT/train_data). Please download them and put them at
-  ./CarbonGPT/ST_data/train_10pv
+  To evaluate the effectiveness of the proposed model in predicting the carbon emissions of the PDN, we have constructed a power transportation network that integrates substantial RES and EVs. These data are organized in [train_data](./CarbonGPT/ST_data_CarbonGPT/train_data). Please download them and put them at ./CarbonGPT/ST_data/train_10pv.
 
 <span id='Instruction Tuning'/>
 
@@ -275,8 +265,7 @@ python -m torch.distributed.run --nnodes=1 --nproc_per_node=8 --master_port=2000
 #### 3.1. Preparing Checkpoints and Data
 
 * **Checkpoints:** You could try to evaluate CarbonGPT by using your own model or our released checkpoints.
-* **Data:** We split test sets for Scenario 1 and Scenario 2 datasets and make the instruction data for evaluation.
-  Please refer to the [evaluating](./CarbonGPT_eval.sh).
+* **Data:** We create instruction data for the PTN to be used in evaluation. Please refer to the [evaluating](./CarbonGPT_eval.sh).
 
 <span id='Running Evaluation'/>
 
