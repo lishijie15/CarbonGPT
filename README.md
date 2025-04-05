@@ -333,7 +333,7 @@ pip install py_dss interface pandas numpy
 
 Please put the json output into the **data/JsonData** folder.
 
-Then, run the following command to forecasting carbon emissions flow at specific timestamp:
+Then, run the following command to forecast carbon emissions flow at specific timestamp:
 
 ```shell
 python generate_opendss.py -filetype json -pred_or_true pred -index <timestamp>
