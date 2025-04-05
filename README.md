@@ -54,8 +54,8 @@ PDS based on actual load data. Drawing inspiration from this approach, we utiliz
 large-scale RES-integrated PDSs that closely approximate real-world scenarios.
 
 Specifically, RPTM utilizes real winter load
-data ([U.S. Building End-Use Load Profiles dataset](https://www.osti.gov/biblio/1576489/)), and combines it with RES
-data derived from historical weather data across 22 adjacent small areas in Colorado, USA, where the load dataset is
+data ([U.S. Building End-Use Load Profiles dataset](https://www.osti.gov/biblio/1576489/)), and combines it with [RES
+data](https://www.sciencedirect.com/science/article/pii/S0360544216311744) derived from historical weather data across 22 adjacent small areas in Colorado, USA, where the load dataset is
 located. Additionally, government policies, population size, and economic benefits are taken into account. Then, the
 long-term datasets (i.e., load and RES) are mapped into
 the [IEEE 8500-node test feeder](https://ieeexplore.ieee.org/document/5484381) according to its topology and feeder
@@ -66,13 +66,7 @@ a [rated capacity of 10 kW](https://link.springer.com/chapter/10.1007/978-3-031-
 GE-1.6, each with a rated capacity of 1.5 MW and
 a [height of 80 meters](https://www.sciencedirect.com/science/article/pii/S0360544216311811#:~:text=This%20paper%20reports%20the%20first%20international%20validation%20of,NASA%27s%20MERRA%20and%20MERRA-2%20in%2023%20European%20countries.).
 
-Subsequently, based on the constructed PDN, we couple the UTN with it to analyze the impact of electrification
-transition on carbon emissions in the UTN. Currently, none of publicly available datasets cover both PDN and UTN
-information for the same area. Certain scholars have merged analogous power and traffic systems to create the PTN.
-Nevertheless, the resulting system is relatively limited in scale and deviates substantially from real-world PDNs. To
-address this issue, this paper selects the IEEE 8500-node test feeder and
-the [UTD19](https://www.nature.com/articles/s41598-019-51539-5) dataset as the data sources for the PDN and UTN,
-respectively, and fuses them to construct a large-scale PTN.
+Subsequently, based on the constructed PDN, we couple the UTN with it to analyze the impact of electrification transition on carbon emissions in the UTN. Currently, none of publicly available datasets cover both PDN and UTN information for the same area. Certain scholars have merged analogous power and traffic systems to create the PTN. Nevertheless, the resulting system is relatively limited in scale and deviates substantially from real-world PDNs. To address this issue, this paper selects the IEEE 8500-node test feeder and the [UTD19](https://www.nature.com/articles/s41598-019-51539-5) dataset as the data sources for the PDN and UTN, respectively, and fuses them to construct a large-scale PTN.
 
 Specifically, various regions exhibit significant differences in climate conditions, electricity consumption habits,
 driving patterns, and EV penetration rates. These factors greatly influence the distribution of load peaks and valleys.
