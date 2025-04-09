@@ -93,8 +93,13 @@ independently from CarbonGPT.
 
 ## Simulation Setting
 
-Our simulations utilize the powerful [Vicuna-7B](https://dl.acm.org/doi/abs/10.5555/3666122.3668142) as the foundational
-LLM, with the key hyperparameters specified as follows:
+Our simulations utilize the powerful [Vicuna-7B](https://dl.acm.org/doi/abs/10.5555/3666122.3668142) as the foundational LLM. This high-performance, open-source LLM demonstrates exceptional capabilities in tasks such as general knowledge question answering and causal reasoning. We employ it as the foundational LLM owing to its:
+
+* Powerful multi-task adaptability, enabled by pre-training on massive and diverse datasets.
+* Outstanding performance in spatio-temporal data analysis tasks, such as traffic flow prediction ([GraphGPT](https://dl.acm.org/doi/10.1145/3626772.3657775)).
+* Inherent reasoning capabilities, which effectively support complex system modeling.
+
+The key hyperparameters of the proposed CarbonGPT are specified as follows:
 
 | Parameters Description               | Value                    |
 |--------------------------------------|--------------------------|
@@ -301,23 +306,76 @@ results.
 
 #### 4.1. Code Structure of the Carbon Emission Flow
 
-* **data/JsonData:** Contains the JSON files with load, wind power, and photovoltaic prediction data
-* **data/template:** Contains the template files for the OpenDSS files
-* **plot:** Contains the plot files
-* **Feeders/8500-Node:** Contains the OpenDSS files for the feeders
-* **concat data.py:** Concatenates the load, wind power, and photovoltaic prediction data
-* **PF_transfer.py:** Sets up the power flow simulation and predicts carbon emissions
-* **load_opendss.py:** Generate load-related OpenDSS files based on the template file
-* **generate_opendss.py:** Generate Generator-related OpenDSS files based on the template file and run carbon emission
-  flow
-* **Carbon_new.py:** Predicts carbon emissions
+* **data/JsonData**: Contains JSON files with load, wind power, and PV prediction data.
+* **data/template**: Stores template files for OpenDSS configurations.
+* **Feeders/8500-Node**: Includes OpenDSS feeder model files.
+* **concat_data.py**: Concatenates load, wind power, and PV prediction data.
+* **PF_transfer.py**: Configures power flow simulations and predicts carbon emissions.
+* **load_opendss.py**: Generates load-related OpenDSS files from templates.
+* **generate_opendss.py**: Creates generator-related OpenDSS files and runs carbon emission flow analysis.
+* **Carbon_new.py**: Predicts carbon emissions.
+
+```
+Carbon_emission
+├─ Carbon_new.py
+├─ concat_data.py
+├─ evaluate.py
+├─ generate_opendss.py
+├─ load_opendss.py
+├─ PF_transfer.py
+├─ README.md
+├─ function
+│  └─ load_data.py
+├─ Feeders
+│  └─ 8500-Node
+│     ├─ IEEE8500_EXP_POWERS.CSV
+│     ├─ IEEE8500_EXP_VOLTAGES.CSV
+│     ├─ IEEE8500_Power_seq_kVA.txt
+│     ├─ IEEE8500_Profile9994.dbl
+│     ├─ IEEE8500_Profile9994.DSV
+│     ├─ IEEE8500_Profile9996.dbl
+│     ├─ IEEE8500_Profile9996.DSV
+│     ├─ IEEE8500_Profile9999.dbl
+│     ├─ IEEE8500_Profile9999.DSV
+│     ├─ IEEE8500_VLL_Node.Txt
+│     ├─ IEEE8500_VLN_Node.Txt
+│     ├─ Master.dss
+│     └─ opendss
+│        ├─ Buscoords.dss
+│        ├─ Capacitors.dss
+│        ├─ CapControls.DSS
+│        ├─ LineCodes2.DSS
+│        ├─ Lines.dss
+│        ├─ LoadXfmrs.dss
+│        ├─ Regulators.dss
+│        ├─ Transformers.dss
+│        ├─ Triplex_Linecodes.dss
+│        └─ Triplex_Lines.DSS
+└─ data
+   ├─ gen_list.csv
+   ├─ load_list.csv
+   ├─ JsonData
+   ├─ NpyData
+   ├─ template
+   │  ├─ 1177nodes.csv
+   │  ├─ 119.csv
+   │  ├─ Generators.dss
+   │  ├─ Generators_min.dss
+   │  ├─ Loads.dss
+   │  └─ LoadXfmrs.dss
+   └─ Line
+      ├─ Lines.dss
+      ├─ Line_pre.csv
+      ├─ Line_pre1.csv
+      └─ Line_pre2.csv
+            
+```
 
 <span id='Environment of the Carbon Emission Flow'/>
 
 #### 4.2. Environment of the Carbon Emission Flow (Restricted to *Windows*)
 
-You could first clone the repo and install the reguired environment, which can be done by running the following
-commands.
+You could first clone the repo and install the reguired environment, which can be done by running the following commands.
 
 ```shell
 conda create -n carbonEmission python-3.11
@@ -332,7 +390,7 @@ pip install py_dss interface pandas numpy
 
 Please put the json output into the **data/JsonData** folder.
 
-Then, run the following command to forecast carbon emissions flow at specific timestamp:
+Then, run the following command to predict carbon emissions flow at specific timestamp:
 
 ```shell
 python generate_opendss.py -filetype json -pred_or_true pred -index <timestamp>
