@@ -1,0 +1,21 @@
+// 12.47/480V Transformer and neutral reactor definition.
+New "Transformer.G_L3029502"  XHL=5.75  kVA=8.51  Conns=[wye, Delta]
+~ wdg=1 bus=L3029502.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_L3029502        kV=0.48
+New Reactor.G_L3029502 Phases = 1 Bus1 = L3029502.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+// 12.47/480V Transformer and neutral reactor definition.
+New "Transformer.G_L3104121"  XHL=5.75  kVA=0.02  Conns=[wye, Delta]
+~ wdg=1 bus=L3104121.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_L3104121        kV=0.48
+New Reactor.G_L3104121 Phases = 1 Bus1 = L3104121.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+
+
+// Generator definition
+New   "Generator.G_L3029502"  Bus1=G_L3029502  kW=8.51  PF=1  kVA=8.51  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+// Generator definition
+New   "Generator.G_L3104121"  Bus1=G_L3104121  kW=0.02  PF=1  kVA=0.02  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect

@@ -323,7 +323,6 @@ Carbon_emission
 ├─ generate_opendss.py
 ├─ load_opendss.py
 ├─ PF_transfer.py
-├─ README.md
 ├─ function
 │  └─ load_data.py
 ├─ Feeders

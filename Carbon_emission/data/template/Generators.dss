@@ -1,0 +1,804 @@
+// 12.47/480V Transformer and neutral reactor definition.
+New "Transformer.G_m1009763"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1009763.1.2.3.4  kV=12.47  
+~ wdg=2 bus=G_m1009763        kV=0.48  
+New  Reactor.G_m1009763  Phases=1  Bus1=m1009763.4  R=0.001  X=0  !Neutral Reactor/Resistor
+
+// 12.47/480V Transformer and neutral reactor definition.
+New "Transformer.G_m1026700"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026700.1.2.3.4  kV=12.47  
+~ wdg=2 bus=G_m1026700        kV=0.48  
+New  Reactor.G_m1026700  Phases=1  Bus1=m1026700.4  R=0.001  X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026891"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026891.1.2.3.4  kV=12.47  
+~ wdg=2 bus=G_m1026891        kV=0.48  
+New  Reactor.G_m1026891  Phases=1  Bus1=m1026891.4  R=0.001  X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1108532"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1108532.1.2.3.4  kV=12.47  
+~ wdg=2 bus=G_m1108532        kV=0.48  
+New  Reactor.G_m1108532  Phases=1  Bus1=m1108532.4  R=0.001  X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026907"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026907.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026907        kV=0.48
+New Reactor.G_m1026907 Phases = 1 Bus1 = m1026907.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026876"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026876.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026876        kV=0.48
+New Reactor.G_m1026876 Phases = 1 Bus1 = m1026876.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1009805"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1009805.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1009805        kV=0.48
+New Reactor.G_m1009805 Phases = 1 Bus1 = m1009805.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069515"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069515.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069515        kV=0.48
+New Reactor.G_m1069515 Phases = 1 Bus1 = m1069515.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069509"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069509.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069509        kV=0.48
+New Reactor.G_m1069509 Phases = 1 Bus1 = m1069509.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047339"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047339.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047339        kV=0.48
+New Reactor.G_m1047339 Phases = 1 Bus1 = m1047339.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142871"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142871.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142871        kV=0.48
+New Reactor.G_m1142871 Phases = 1 Bus1 = m1142871.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142832"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142832.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142832        kV=0.48
+New Reactor.G_m1142832 Phases = 1 Bus1 = m1142832.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1125969"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1125969.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1125969        kV=0.48
+New Reactor.G_m1125969 Phases = 1 Bus1 = m1125969.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1209774"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1209774.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1209774        kV=0.48
+New Reactor.G_m1209774 Phases = 1 Bus1 = m1209774.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069461"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069461.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069461        kV=0.48
+New Reactor.G_m1069461 Phases = 1 Bus1 = m1069461.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1209800"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1209800.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1209800        kV=0.48
+New Reactor.G_m1209800 Phases = 1 Bus1 = m1209800.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142828"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142828.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142828        kV=0.48
+New Reactor.G_m1142828 Phases = 1 Bus1 = m1142828.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026800"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026800.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026800        kV=0.48
+New Reactor.G_m1026800 Phases = 1 Bus1 = m1026800.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026701"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026701.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026701        kV=0.48
+New Reactor.G_m1026701 Phases = 1 Bus1 = m1026701.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069418"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069418.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069418        kV=0.48
+New Reactor.G_m1069418 Phases = 1 Bus1 = m1069418.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1009784"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1009784.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1009784        kV=0.48
+New Reactor.G_m1009784 Phases = 1 Bus1 = m1009784.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047720"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047720.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047720        kV=0.48
+New Reactor.G_m1047720 Phases = 1 Bus1 = m1047720.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069533"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069533.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069533        kV=0.48
+New Reactor.G_m1069533 Phases = 1 Bus1 = m1069533.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047763"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047763.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047763        kV=0.48
+New Reactor.G_m1047763 Phases = 1 Bus1 = m1047763.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026851"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026851.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026851        kV=0.48
+New Reactor.G_m1026851 Phases = 1 Bus1 = m1026851.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1186064"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1186064.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1186064        kV=0.48
+New Reactor.G_m1186064 Phases = 1 Bus1 = m1186064.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047526"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047526.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047526        kV=0.48
+New Reactor.G_m1047526 Phases = 1 Bus1 = m1047526.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089207"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089207.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089207        kV=0.48
+New Reactor.G_m1089207 Phases = 1 Bus1 = m1089207.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047649"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047649.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047649        kV=0.48
+New Reactor.G_m1047649 Phases = 1 Bus1 = m1047649.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1166377"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1166377.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1166377        kV=0.48
+New Reactor.G_m1166377 Phases = 1 Bus1 = m1166377.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1125997"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1125997.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1125997        kV=0.48
+New Reactor.G_m1125997 Phases = 1 Bus1 = m1125997.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m4277837"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m4277837.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m4277837        kV=0.48
+New Reactor.G_m4277837 Phases = 1 Bus1 = m4277837.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069503"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069503.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069503        kV=0.48
+New Reactor.G_m1069503 Phases = 1 Bus1 = m1069503.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047497"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047497.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047497        kV=0.48
+New Reactor.G_m1047497 Phases = 1 Bus1 = m1047497.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1108493"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1108493.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1108493        kV=0.48
+New Reactor.G_m1108493 Phases = 1 Bus1 = m1108493.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047688"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047688.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047688        kV=0.48
+New Reactor.G_m1047688 Phases = 1 Bus1 = m1047688.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069498"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069498.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069498        kV=0.48
+New Reactor.G_m1069498 Phases = 1 Bus1 = m1069498.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026861"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026861.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026861        kV=0.48
+New Reactor.G_m1026861 Phases = 1 Bus1 = m1026861.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047615"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047615.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047615        kV=0.48
+New Reactor.G_m1047615 Phases = 1 Bus1 = m1047615.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m4113347"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m4113347.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m4113347        kV=0.48
+New Reactor.G_m4113347 Phases = 1 Bus1 = m4113347.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1149233"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1149233.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1149233        kV=0.48
+New Reactor.G_m1149233 Phases = 1 Bus1 = m1149233.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089120"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089120.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089120        kV=0.48
+New Reactor.G_m1089120 Phases = 1 Bus1 = m1089120.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026977"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026977.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026977        kV=0.48
+New Reactor.G_m1026977 Phases = 1 Bus1 = m1026977.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1027055"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1027055.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1027055        kV=0.48
+New Reactor.G_m1027055 Phases = 1 Bus1 = m1027055.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026796"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026796.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026796        kV=0.48
+New Reactor.G_m1026796 Phases = 1 Bus1 = m1026796.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026744"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026744.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026744        kV=0.48
+New Reactor.G_m1026744 Phases = 1 Bus1 = m1026744.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089115"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089115.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089115        kV=0.48
+New Reactor.G_m1089115 Phases = 1 Bus1 = m1089115.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047503"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047503.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047503        kV=0.48
+New Reactor.G_m1047503 Phases = 1 Bus1 = m1047503.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047574"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047574.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047574        kV=0.48
+New Reactor.G_m1047574 Phases = 1 Bus1 = m1047574.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069499"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069499.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069499        kV=0.48
+New Reactor.G_m1069499 Phases = 1 Bus1 = m1069499.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047513"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047513.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047513        kV=0.48
+New Reactor.G_m1047513 Phases = 1 Bus1 = m1047513.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1186061"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1186061.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1186061        kV=0.48
+New Reactor.G_m1186061 Phases = 1 Bus1 = m1186061.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089143"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089143.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089143        kV=0.48
+New Reactor.G_m1089143 Phases = 1 Bus1 = m1089143.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069483"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069483.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069483        kV=0.48
+New Reactor.G_m1069483 Phases = 1 Bus1 = m1069483.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047732"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047732.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047732        kV=0.48
+New Reactor.G_m1047732 Phases = 1 Bus1 = m1047732.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069513"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069513.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069513        kV=0.48
+New Reactor.G_m1069513 Phases = 1 Bus1 = m1069513.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1209805"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1209805.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1209805        kV=0.48
+New Reactor.G_m1209805 Phases = 1 Bus1 = m1209805.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m3032977"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m3032977.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m3032977        kV=0.48
+New Reactor.G_m3032977 Phases = 1 Bus1 = m3032977.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1149236"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1149236.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1149236        kV=0.48
+New Reactor.G_m1149236 Phases = 1 Bus1 = m1149236.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m3763619"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m3763619.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m3763619        kV=0.48
+New Reactor.G_m3763619 Phases = 1 Bus1 = m3763619.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026695"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026695.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026695        kV=0.48
+New Reactor.G_m1026695 Phases = 1 Bus1 = m1026695.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069424"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069424.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069424        kV=0.48
+New Reactor.G_m1069424 Phases = 1 Bus1 = m1069424.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142865"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142865.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142865        kV=0.48
+New Reactor.G_m1142865 Phases = 1 Bus1 = m1142865.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1125902"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1125902.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1125902        kV=0.48
+New Reactor.G_m1125902 Phases = 1 Bus1 = m1125902.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1108381"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1108381.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1108381        kV=0.48
+New Reactor.G_m1108381 Phases = 1 Bus1 = m1108381.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026866"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026866.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026866        kV=0.48
+New Reactor.G_m1026866 Phases = 1 Bus1 = m1026866.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026329"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026329.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026329        kV=0.48
+New Reactor.G_m1026329 Phases = 1 Bus1 = m1026329.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1108286"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1108286.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1108286        kV=0.48
+New Reactor.G_m1108286 Phases = 1 Bus1 = m1108286.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047485"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047485.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047485        kV=0.48
+New Reactor.G_m1047485 Phases = 1 Bus1 = m1047485.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m4362177"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m4362177.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m4362177        kV=0.48
+New Reactor.G_m4362177 Phases = 1 Bus1 = m4362177.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142819"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142819.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142819        kV=0.48
+New Reactor.G_m1142819 Phases = 1 Bus1 = m1142819.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026658"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026658.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026658        kV=0.48
+New Reactor.G_m1026658 Phases = 1 Bus1 = m1026658.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026960"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026960.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026960        kV=0.48
+New Reactor.G_m1026960 Phases = 1 Bus1 = m1026960.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026786"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026786.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026786        kV=0.48
+New Reactor.G_m1026786 Phases = 1 Bus1 = m1026786.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m3763618"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m3763618.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m3763618        kV=0.48
+New Reactor.G_m3763618 Phases = 1 Bus1 = m3763618.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1069411"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1069411.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1069411        kV=0.48
+New Reactor.G_m1069411 Phases = 1 Bus1 = m1069411.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047292"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047292.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047292        kV=0.48
+New Reactor.G_m1047292 Phases = 1 Bus1 = m1047292.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047713"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047713.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047713        kV=0.48
+New Reactor.G_m1047713 Phases = 1 Bus1 = m1047713.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026858"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026858.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026858        kV=0.48
+New Reactor.G_m1026858 Phases = 1 Bus1 = m1026858.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026927"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026927.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026927        kV=0.48
+New Reactor.G_m1026927 Phases = 1 Bus1 = m1026927.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1009651"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1009651.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1009651        kV=0.48
+New Reactor.G_m1009651 Phases = 1 Bus1 = m1009651.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1108380"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1108380.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1108380        kV=0.48
+New Reactor.G_m1108380 Phases = 1 Bus1 = m1108380.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026354"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026354.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026354        kV=0.48
+New Reactor.G_m1026354 Phases = 1 Bus1 = m1026354.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026697"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026697.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026697        kV=0.48
+New Reactor.G_m1026697 Phases = 1 Bus1 = m1026697.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1027043"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1027043.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1027043        kV=0.48
+New Reactor.G_m1027043 Phases = 1 Bus1 = m1027043.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1027000"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1027000.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1027000        kV=0.48
+New Reactor.G_m1027000 Phases = 1 Bus1 = m1027000.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1027039"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1027039.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1027039        kV=0.48
+New Reactor.G_m1027039 Phases = 1 Bus1 = m1027039.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m3768670"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m3768670.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m3768670        kV=0.48
+New Reactor.G_m3768670 Phases = 1 Bus1 = m3768670.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047580"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047580.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047580        kV=0.48
+New Reactor.G_m1047580 Phases = 1 Bus1 = m1047580.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047507"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047507.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047507        kV=0.48
+New Reactor.G_m1047507 Phases = 1 Bus1 = m1047507.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026954"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026954.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026954        kV=0.48
+New Reactor.G_m1026954 Phases = 1 Bus1 = m1026954.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047490"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047490.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047490        kV=0.48
+New Reactor.G_m1047490 Phases = 1 Bus1 = m1047490.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1047324"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1047324.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1047324        kV=0.48
+New Reactor.G_m1047324 Phases = 1 Bus1 = m1047324.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m3036170"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m3036170.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m3036170        kV=0.48
+New Reactor.G_m3036170 Phases = 1 Bus1 = m3036170.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089118"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089118.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089118        kV=0.48
+New Reactor.G_m1089118 Phases = 1 Bus1 = m1089118.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1149235"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1149235.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1149235        kV=0.48
+New Reactor.G_m1149235 Phases = 1 Bus1 = m1149235.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026341"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026341.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026341        kV=0.48
+New Reactor.G_m1026341 Phases = 1 Bus1 = m1026341.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1026902"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1026902.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1026902        kV=0.48
+New Reactor.G_m1026902 Phases = 1 Bus1 = m1026902.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1142863"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1142863.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1142863        kV=0.48
+New Reactor.G_m1142863 Phases = 1 Bus1 = m1142863.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+New "Transformer.G_m1089183"  XHL=5.75  kVA=10  Conns=[wye, Delta]
+~ wdg=1 bus=m1089183.1.2.3.4  kV=12.47
+~ wdg=2 bus=G_m1089183        kV=0.48
+New Reactor.G_m1089183 Phases = 1 Bus1 = m1089183.4 R=0.001 X=0  !Neutral Reactor/Resistor
+
+// Generator definition
+New   "Generator.G_m1009763"  Bus1=G_m1009763  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect 
+
+// Generator definition
+New   "Generator.G_m1026700"  Bus1=G_m1026700  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect 
+
+New   "Generator.G_m1026891"  Bus1=G_m1026891  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect 
+
+New   "Generator.G_m1108532"  Bus1=G_m1108532  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect 
+
+New   "Generator.G_m1026907"  Bus1=G_m1026907  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026876"  Bus1=G_m1026876  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1009805"  Bus1=G_m1009805  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069515"  Bus1=G_m1069515  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069509"  Bus1=G_m1069509  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047339"  Bus1=G_m1047339  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142871"  Bus1=G_m1142871  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142832"  Bus1=G_m1142832  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1125969"  Bus1=G_m1125969  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1209774"  Bus1=G_m1209774  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069461"  Bus1=G_m1069461  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1209800"  Bus1=G_m1209800  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142828"  Bus1=G_m1142828  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026800"  Bus1=G_m1026800  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026701"  Bus1=G_m1026701  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069418"  Bus1=G_m1069418  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1009784"  Bus1=G_m1009784  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047720"  Bus1=G_m1047720  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069533"  Bus1=G_m1069533  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047763"  Bus1=G_m1047763  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026851"  Bus1=G_m1026851  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1186064"  Bus1=G_m1186064  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047526"  Bus1=G_m1047526  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089207"  Bus1=G_m1089207  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047649"  Bus1=G_m1047649  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1166377"  Bus1=G_m1166377  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1125997"  Bus1=G_m1125997  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m4277837"  Bus1=G_m4277837  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069503"  Bus1=G_m1069503  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047497"  Bus1=G_m1047497  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1108493"  Bus1=G_m1108493  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047688"  Bus1=G_m1047688  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069498"  Bus1=G_m1069498  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026861"  Bus1=G_m1026861  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047615"  Bus1=G_m1047615  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m4113347"  Bus1=G_m4113347  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1149233"  Bus1=G_m1149233  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089120"  Bus1=G_m1089120  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026977"  Bus1=G_m1026977  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1027055"  Bus1=G_m1027055  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026796"  Bus1=G_m1026796  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026744"  Bus1=G_m1026744  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089115"  Bus1=G_m1089115  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047503"  Bus1=G_m1047503  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047574"  Bus1=G_m1047574  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069499"  Bus1=G_m1069499  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047513"  Bus1=G_m1047513  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1186061"  Bus1=G_m1186061  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089143"  Bus1=G_m1089143  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069483"  Bus1=G_m1069483  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047732"  Bus1=G_m1047732  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069513"  Bus1=G_m1069513  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1209805"  Bus1=G_m1209805  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m3032977"  Bus1=G_m3032977  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1149236"  Bus1=G_m1149236  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m3763619"  Bus1=G_m3763619  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026695"  Bus1=G_m1026695  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069424"  Bus1=G_m1069424  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142865"  Bus1=G_m1142865  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1125902"  Bus1=G_m1125902  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1108381"  Bus1=G_m1108381  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026866"  Bus1=G_m1026866  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026329"  Bus1=G_m1026329  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1108286"  Bus1=G_m1108286  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047485"  Bus1=G_m1047485  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m4362177"  Bus1=G_m4362177  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142819"  Bus1=G_m1142819  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026658"  Bus1=G_m1026658  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026960"  Bus1=G_m1026960  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026786"  Bus1=G_m1026786  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m3763618"  Bus1=G_m3763618  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1069411"  Bus1=G_m1069411  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047292"  Bus1=G_m1047292  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047713"  Bus1=G_m1047713  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026858"  Bus1=G_m1026858  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026927"  Bus1=G_m1026927  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1009651"  Bus1=G_m1009651  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1108380"  Bus1=G_m1108380  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026354"  Bus1=G_m1026354  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026697"  Bus1=G_m1026697  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1027043"  Bus1=G_m1027043  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1027000"  Bus1=G_m1027000  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1027039"  Bus1=G_m1027039  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m3768670"  Bus1=G_m3768670  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047580"  Bus1=G_m1047580  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047507"  Bus1=G_m1047507  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026954"  Bus1=G_m1026954  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047490"  Bus1=G_m1047490  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1047324"  Bus1=G_m1047324  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m3036170"  Bus1=G_m3036170  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089118"  Bus1=G_m1089118  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1149235"  Bus1=G_m1149235  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026341"  Bus1=G_m1026341  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1026902"  Bus1=G_m1026902  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1142863"  Bus1=G_m1142863  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
+New   "Generator.G_m1089183"  Bus1=G_m1089183  kW=10  PF=1  kVA=10  kV=0.48  Xdp=0.27  Xdpp=0.2  H=2
+~ Conn=Delta   ! use the interconnection transformer to achieve wye for direct connect
+
