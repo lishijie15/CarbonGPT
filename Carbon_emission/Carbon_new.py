@@ -304,7 +304,7 @@ def calculate_carbon_emission_flow(P_B, P_G, P_L, E_G, load_node_index):  # 一�
 
     R_G = np.sum(P_G, axis=1)
     R_G = R_G * E_G  # kgCO₂/h
-    R_B = np.matmul(P_B, np.diag(E_N))  # 转换成tCO_2 /kwh      但是因为这里乘上了功率 所以是 tCO_2 /h。应该不对吧，除以1000应该是kgCO_2 /kwh转为tCO_2 /kwh
+    R_B = np.matmul(np.diag(E_N), P_B)  # 转换成tCO_2 /kwh      但是因为这里乘上了功率 所以是 tCO_2 /h。应该不对吧，除以1000应该是kgCO_2 /kwh转为tCO_2 /kwh
     R_L = np.matmul(P_L, E_N)  # kgCO₂/h
     R_N = np.matmul(Q_NK, P_Z).T
     R_N_original = np.copy(R_N)
