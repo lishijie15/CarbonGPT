@@ -26,10 +26,8 @@ def concat_data(opt):
             min_pv = np.min(y_pred_pv)
             y_pred_pv[y_pred_pv < abs(min_pv) + 1e-4] = 0
 
-            # 将小于98的值替换为0
             # y_pred_wind[y_pred_wind <= 98] = 0
 
-            # y_pred_wind保留值最大的两个，其余的置为0
             y_pred_wind = np.where(y_pred_wind >= np.partition(y_pred_wind, -2, axis=1)[:, -2][:, None], y_pred_wind, 0)
 
             for i in range(12):

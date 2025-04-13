@@ -28,18 +28,15 @@ def calculate_error_zero_index(gt, pred, ind=None):
         print(os.path.join(gt, files_true[2 * index]))
         true_data_index.append(np.load(os.path.join(gt, files_true[2 * index + 1])))
     result = []
-    # 计算3个batch分别的均方根误差和平均绝对误差
     for i in range(len(pred_data)):
         if not np.array_equal(true_data_index[i], pred_data_index[i]):
             diff_index = np.setdiff1d(true_data_index[i], pred_data_index[i])
             for j in range(len(diff_index)):
-                # 找到pred_data_index中比diff_index[j]小的元素数目
                 count = np.sum(pred_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] + count
             pred_data[i] = np.delete(pred_data[i], diff_index)
             diff_index = np.setdiff1d(pred_data_index[i], true_data_index[i])
             for j in range(len(diff_index)):
-                # 找到true_data_index中比diff_index[j]小的元素数目
                 count = np.sum(true_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] - count
             true_data[i] = np.delete(true_data[i], diff_index)
@@ -56,10 +53,6 @@ def calculate_error_zero_index(gt, pred, ind=None):
         print(result[ind] + ' ' + result[ind + 2] + ' ' + result[ind + 5])
     else:
         print(' '.join(result))
-    MAEs = np.array(MAEs)
-    min_indices = np.argsort(MAEs).tolist()
-    print(min_indices[:30])
-    print(MAEs[min_indices[:30]])
 
 
 def calculate_error_total_zero_index_24(gt, pred):
@@ -89,13 +82,11 @@ def calculate_error_total_zero_index_24(gt, pred):
                 if not np.array_equal(temp_true_data_index[j], temp_pred_data_index[j]):
                     diff_index = np.setdiff1d(temp_true_data_index[j], temp_pred_data_index[j])
                     for k in range(len(diff_index)):
-                        # 找到pred_data_index中比diff_index[j]小的元素数目
                         count = np.sum(temp_pred_data_index[j] < diff_index[k])
                         diff_index[k] = diff_index[k] + count
                     temp_pred_data[j] = np.delete(temp_pred_data[j], diff_index)
                     diff_index = np.setdiff1d(temp_pred_data_index[j], temp_true_data_index[j])
                     for k in range(len(diff_index)):
-                        # 找到true_data_index中比diff_index[j]小的元素数目
                         count = np.sum(temp_true_data_index[j] < diff_index[k])
                         diff_index[k] = diff_index[k] - count
                     temp_true_data[j] = np.delete(temp_true_data[j], diff_index)
@@ -138,18 +129,15 @@ def calculate_error_zero_index_one_timestamp(gt, pred):
             pred_data.pop(-1)
             pred_data_index.pop(-1)
     result = []
-    # 计算3个batch分别的均方根误差和平均绝对误差
     for i in range(len(pred_data)):
         if not np.array_equal(true_data_index[i], pred_data_index[i]):
             diff_index = np.setdiff1d(true_data_index[i], pred_data_index[i])
             for j in range(len(diff_index)):
-                # 找到pred_data_index中比diff_index[j]小的元素数目
                 count = np.sum(pred_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] + count
             pred_data[i] = np.delete(pred_data[i], diff_index)
             diff_index = np.setdiff1d(pred_data_index[i], true_data_index[i])
             for j in range(len(diff_index)):
-                # 找到true_data_index中比diff_index[j]小的元素数目
                 count = np.sum(true_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] - count
             true_data[i] = np.delete(true_data[i], diff_index)
@@ -186,18 +174,15 @@ def calculate_error_zero_index_30_timestamp(gt, pred):
             true_data.append(np.load(os.path.join(gt, files_true[file_index])))
             true_data_index.append(np.load(os.path.join(gt, files_true[file_index + 1])))
     result = []
-    # 计算3个batch分别的均方根误差和平均绝对误差
     for i in range(len(pred_data)):
         if not np.array_equal(true_data_index[i], pred_data_index[i]):
             diff_index = np.setdiff1d(true_data_index[i], pred_data_index[i])
             for j in range(len(diff_index)):
-                # 找到pred_data_index中比diff_index[j]小的元素数目
                 count = np.sum(pred_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] + count
             pred_data[i] = np.delete(pred_data[i], diff_index)
             diff_index = np.setdiff1d(pred_data_index[i], true_data_index[i])
             for j in range(len(diff_index)):
-                # 找到true_data_index中比diff_index[j]小的元素数目
                 count = np.sum(true_data_index[i] < diff_index[j])
                 diff_index[j] = diff_index[j] - count
             true_data[i] = np.delete(true_data[i], diff_index)

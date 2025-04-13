@@ -111,14 +111,13 @@ class SmartInverterFunction:
 
 
 def strfill(src, lg, str1):
-    # math.ceil是向上取整，这个下面会具体介绍
     n = math.ceil((lg - len(src)) / len(str1))
     newstr = src + str1 * n
     return newstr[0:lg]
 
 
 # Set the parameters relevant to the power flow calculation.
-def set_baseline():  # 设立一些基本参数
+def set_baseline():
     dss.text("New Energymeter.m1 Line.ln5815900-1 1")
     dss.text("Set Maxiterations=100")
     dss.text("set maxcontrolit=100")
@@ -127,14 +126,14 @@ def set_baseline():  # 设立一些基本参数
     dss.text("Batchedit Load..* daily=default")
 
 
-def set_time_series_simulation():  # 设定一些参数
+def set_time_series_simulation():
     dss.text("set controlmode=Static")
     dss.text("set mode=Snap")
     # dss.text("set number=24")
     # dss.text("set stepsize=1h")
 
 
-def get_energymeter_results():  # 返回生成的所需数据
+def get_energymeter_results():
     dss.meters_write_name("m1")
     feeder_kwh = dss.meters_register_values()[0]
     feeder_kvarh = dss.meters_register_values()[1]
@@ -148,8 +147,8 @@ def get_energymeter_results():  # 返回生成的所需数据
 def powerFlowCalculation():
     smart_inverter_functions_list = ["unity-pf", "pf", "volt-var"]
     # Read the parameter file.
-    script_path = os.path.dirname(os.path.abspath(__file__))  # 获取当前文件的绝对路径，在获取该路径的目录部分，即去除文件名
-    dss_file = pathlib.Path(script_path).joinpath("Feeders", "8500-Node", "Master.dss")  # 通过master文件去选择参数文件
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    dss_file = pathlib.Path(script_path).joinpath("Feeders", "8500-Node", "Master.dss")
 
     bus = "l3104830"
 
@@ -203,7 +202,6 @@ def powerFlowCalculation():
     # dss.text("Plot Circuit quantity=3 object=mybranchdata.csv")
     # dss.text("Plot General quantity=1 object=mybusdata.csv")
 
-    # 画节点图的
     # dss.text("Plot profile phases=Angle")
     # dss.text("Plot profile phases=LL3ph")
     # dss.text("Plot profile phases=LLall")

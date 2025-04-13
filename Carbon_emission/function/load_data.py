@@ -9,7 +9,7 @@ def extract_numbers(filename):
     return list(map(int, re.findall(r'\d+', filename)))
 
 
-def load(folder_path=r'C:\Users\HP\Desktop\Python\Carbon_emission\data\JsonData'):
+def load(folder_path=r'.\data\JsonData'):
     y_pred_load = []
     y_true_load = []
     y_pred_pv = []
@@ -147,7 +147,7 @@ def load_urbangpt_npy(true_data, pred_data):
     return true_data[..., 0], pred_data[..., 0], true_data[..., 1], pred_data[..., 1]
 
 
-def load_urbangpt(folder_path=r'C:\Users\HP\Desktop\Python\Carbon_emission\data\JsonData\UrbanGPT'):
+def load_urbangpt(folder_path=r'.\data\JsonData\UrbanGPT'):
     y_pred_load = []
     y_true_load = []
     y_pred_pv_wind = []
@@ -248,51 +248,3 @@ if __name__ == '__main__':
             np.stack((y_true_load, y_true_pv, y_true_wind), axis=-1))
     np.save(r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\CarbonGPTonlyRES_prediction.npy',
             np.stack((y_pred_load, y_pred_pv, y_pred_wind), axis=-1))
-
-    # y_true_load_urbangpt, y_pred_load_urbangpt, y_true_pv_wind_urbangpt, y_pred_pv_wind_urbangpt, y_true_net_load_urbangpt, _ = load_urbangpt()
-    # np.save(r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\UrbanGPT_groundtruth.npy',
-    #         np.stack((y_true_load_urbangpt, y_true_pv_wind_urbangpt), axis=-1))
-    # np.save(r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\UrbanGPT_prediction.npy',
-    #         np.stack((y_pred_load_urbangpt, y_pred_pv_wind_urbangpt), axis=-1))
-
-    # y_true_load_urbangpt = np.sum(y_true_load_urbangpt, axis=2)
-    # y_true_pv_wind_urbangpt = np.sum(y_true_pv_wind_urbangpt, axis=2)
-    # y_true_load = np.sum(y_true_load, axis=2)
-    # y_true_pv = np.sum(y_true_pv, axis=2)
-    # y_true_wind = np.sum(y_true_wind, axis=2)
-    # equal_load = equal(y_true_load, y_true_load_urbangpt)
-    # equal_res = equal(y_true_pv + y_true_wind, y_true_pv_wind_urbangpt)
-    # print出来不相等的元素
-    # for i in range(len(equal_load[0])):
-    #     for j in range(len(equal_load[0][i])):
-    #         if not equal_load[0][i][j]:
-    #             print(y_true_load[0][i][j], y_true_load_urbangpt[0][i][j])
-    # for i in equal_res:
-    #     if i.all():
-    #         print("All elements are equal")
-
-    # y_true_load_mpgtn, _, y_true_pv_mpgtn, y_pred_pv_mpgtn, y_true_wind_mpgtn, _ = load_npy(
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\npy\power_DG_MPGTN_20241018144454\MPGTN_groundtruth.npy',
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\npy\power_DG_MPGTN_20241018144454\MPGTN_prediction.npy')
-
-    #
-    # y_true_load_megacrn, _, y_true_pv_megacrn, _, y_true_wind_megacrn, _ = load_npy(
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\npy\power_DG_MegaCRN_20241008145010\MegaCRN_groundtruth.npy',
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\npy\power_DG_MegaCRN_20241008145010\MegaCRN_prediction.npy')
-    # #
-    # y_true_load_dg, y_pred_load_dg = load_dg(r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\power_DG_true.npy',
-    #                                          r'C:\Users\HP\Desktop\Python\Carbon_emission\data\npy\AGCRN\power_DG_pred.npy')
-    #
-    # y_true_load_tgcn, _, y_true_pv_tgcn, _, y_true_wind_tgcn, _ = load_npy(
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\TGCN_groundtruth.npy',
-    #     r'C:\Users\HP\Desktop\Python\Carbon_emission\data\NpyData\TGCN_prediction.npy')
-    # #
-    # equal_load = equal(y_true_load[98], y_true_load_tgcn[98])
-    # for i in range(len(equal_load)):
-    #     for j in range(len(equal_load[i])):
-    #         if not equal_load[i][j]:
-    #             print(y_true_load[98][i][j], y_true_load_tgcn[98][i][j])
-    #
-    # for i in equal_load:
-    #     if i.all():
-    #         print("All elements are equal")
