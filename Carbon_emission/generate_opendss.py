@@ -242,7 +242,6 @@ def parse_args():
 
 if __name__ == '__main__':
     options = parse_args()
-    generate_opendss_files(options)
     concat_data(options)
     generate_opendss_files(options)
     generateOpendss(options)
