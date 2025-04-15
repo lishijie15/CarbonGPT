@@ -74,7 +74,7 @@ class SmartInverterFunction:
             "New Tshape.MyTemp "
             "npts=24 "
             "interval=1 "
-            "CarbonGPT=[25, 25, 25, 25, 25, 25, 25, 25, 35, 40, 45, 50  60 60  55 40  35  30  25 25 25 25 25 25]")
+            "temp=[25, 25, 25, 25, 25, 25, 25, 25, 35, 40, 45, 50  60 60  55 40  35  30  25 25 25 25 25 25]")
 
     def __define_pvsystem(self):
         self.dss.text(
