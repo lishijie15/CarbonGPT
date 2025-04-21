@@ -1,4 +1,4 @@
-# CarbonGPT: Meta Causal Graph Large Language Models for Carbon Emission Forecasting in Large-scale Power Distribution Networks
+# CarbonGPT: Meta Causal Graph-Enhanced Large Language Models for Carbon Emission Forecasting in Large-scale Power Distribution Networks
 
 Shijie Li, Jiajun Lai, Haoqin Li, Wenhu Tang, Ying Xue, Huaiguang Jiang*  (*Corresponding author)<br />
 
