@@ -394,3 +394,18 @@ Then, run the following command to predict carbon emissions flow at specific tim
 ```shell
 python generate_opendss.py -filetype json -pred_or_true pred -index <timestamp>
 ```
+## BibTeX
+If you find our work useful in your research. Please consider giving a star ⭐ and citation 📚.
+
+```bash
+@ARTICLE{11371414,
+  author={Li, Shijie and Lai, Jiajun and Li, Haoqin and Tang, Wenhu and Xue, Ying and Jiang, Huaiguang},
+  journal={IEEE Transactions on Smart Grid}, 
+  title={CarbonGPT: Meta Causal Graph-Enhanced Large Language Models for Carbon Emission Forecasting in Large-scale Power Distribution Networks}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-13},
+  doi={10.1109/TSG.2026.3660950}}
+}
+```
