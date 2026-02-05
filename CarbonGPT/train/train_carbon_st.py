@@ -343,7 +343,6 @@ def preprocess_v1(
             round_len = len(tokenizer(rou).input_ids)
             instruction_len = len(tokenizer(parts[0]).input_ids) - 2
 
-            # mask多余长度
             target[cur_len: cur_len + instruction_len] = IGNORE_INDEX
 
             cur_len += round_len

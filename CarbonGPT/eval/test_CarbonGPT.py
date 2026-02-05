@@ -68,8 +68,8 @@ def load_prompting_file(file_path):
 
 def run_eval(args, num_gpus):
     # split question file into num_gpus files
-    prompt_file = load_prompting_file(args.prompting_file)  #.json
-    prompt_file = prompt_file[args.start_id:args.end_id]  #.pkl
+    prompt_file = load_prompting_file(args.prompting_file)
+    prompt_file = prompt_file[args.start_id:args.end_id]
     # print('prompt_file_len', len(prompt_file))
     chunk_size = len(prompt_file) // num_gpus
     ans_handles = []
@@ -88,7 +88,6 @@ def run_eval(args, num_gpus):
 
     if osp.exists(args.output_res_path) is False:
         os.makedirs(args.output_res_path, exist_ok=True)
-        # os.mkdir(args.output_res_path)
 
     for idx in range(len(idx_list) - 1):
         start_idx = idx_list[idx]
@@ -112,7 +111,7 @@ def eval_model(args, prompt_file, start_idx, end_idx):
     disable_torch_init()
     # model_name = os.path.expanduser(args.model_name)
     print('start loading')
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name)  #核对转换是否一致  新增词汇是否需要重新保存
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
     print('finish loading')
 
     print('start loading')
@@ -157,10 +156,6 @@ def eval_model(args, prompt_file, start_idx, end_idx):
         qs = qs.replace(DEFAULT_STHIS_TOKEN, replace_token)
         qs = qs.replace(DEFAULT_STPRE_TOKEN, replace_token)
 
-        # if "v1" in args.model_name.lower():
-        #     conv_mode = "stchat_v1"
-        # else:
-        #     raise ValueError('Don\'t support this model')
         conv_mode = "stchat_v1"
 
         if args.conv_mode is not None and conv_mode != args.conv_mode:
