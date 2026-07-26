@@ -405,9 +405,9 @@ If you find our work useful in your research. Please consider giving a star ⭐ 
   journal={IEEE Transactions on Smart Grid}, 
   title={CarbonGPT: Meta Causal Graph-Enhanced Large Language Models for Carbon Emission Forecasting in Large-scale Power Distribution Networks}, 
   year={2026},
-  volume={},
-  number={},
-  pages={1-13},
+  volume={17},
+  number={4},
+  pages={2797-2809},
   doi={10.1109/TSG.2026.3660950}}
 }
 ```
